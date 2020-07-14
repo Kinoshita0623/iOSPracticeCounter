@@ -10,11 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var counterView: UILabel!
+    var counter: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //counterView.delete(self)
+        
     }
-
+    
+    
+    @IBAction func countUp(_ sender: UIButton) {
+        counter += 1
+        counterView.text = String(counter)
+        
+    }
+    
 
 }
 
